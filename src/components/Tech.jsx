@@ -9,7 +9,7 @@ import { fadeIn } from '../utils/motion';
 const Tech = () => {
 	return (
 		<div className=" flex justify-center  items-center w-full">
-			<div className="grid sm:grid-cols-6 grid-cols-5 w-full gap-5">
+			<div className="grid sm:grid-cols-4 lg:grid-cols-6 grid-cols-3 w-full gap-5">
 				{technologies.map((tech, index) => (
 					<a
 						data-tooltip-id="my-tooltip"

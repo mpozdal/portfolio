@@ -56,7 +56,8 @@ const Hero = () => {
 						>
 							<div
 								className="w-10 h-10 cursor-pointer hover:text-black hover:bg-secondary bg-black
-					 rounded-full text-secondary border-2 border-secondary flex justify-center items-center transition duration-300 hover:shadow-md hover:shadow-secondary/50"
+    rounded-full text-secondary border-2 border-secondary flex justify-center items-center 
+    duration-300 hover:shadow-md hover:shadow-secondary/50  relative"
 							>
 								{social.icon}
 							</div>

@@ -63,7 +63,7 @@ const Navbar = () => {
 					</p>
 				</Link>
 
-				<ul className="list-none hidden sm:flex flex-row gap-10 justify-center items-center ">
+				<ul className="list-none hidden lg:flex flex-row gap-10 justify-center items-center ">
 					{navLinks.map((nav) => (
 						<li
 							key={nav.id}
@@ -92,16 +92,16 @@ const Navbar = () => {
 							</a>
 						))}
 					</li>
-					<li className="text-gray-200 text-sm font-medium cursor-pointer flex items-center gap-2 border-[1px] px-6 py-3 tracking-wide hover:text-secondary hover:border-secondary transition-colors duration-300">
+					<li className="text-gray-200 text-sm font-medium cursor-pointer flex items-center gap-2 border-[1px] px-6 py-3 tracking-wide hover:text-secondary hover:border-secondary transition duration-500 hover:scale-90">
 						<a href="#contact">Let's Connect</a>
 					</li>
 				</ul>
 
-				<div className="sm:hidden flex flex-1 justify-end items-center">
+				<div className="lg:hidden flex flex-1 justify-end items-center">
 					<img
 						src={toggle ? close : menu}
 						alt="menu"
-						className="w-[28px] h-[28px] object-contain"
+						className="w-[28px] h-[28px] object-contain transition-all cursor-pointer"
 						onClick={() => setToggle(!toggle)}
 					/>
 
@@ -127,6 +127,20 @@ const Navbar = () => {
 									<a href={`#${nav.id}`}>{nav.title}</a>
 								</li>
 							))}
+							<li
+								key={'contact'}
+								className={`font-poppins font-medium cursor-pointer text-[16px] ${
+									active === 'contact'
+										? 'text-white'
+										: 'text-secondary'
+								}`}
+								onClick={() => {
+									setToggle(!toggle);
+									setActive('contact');
+								}}
+							>
+								<a href={`#contact`}>Contact</a>
+							</li>
 						</ul>
 					</div>
 				</div>

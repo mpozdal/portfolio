@@ -179,50 +179,50 @@ transparent method for file verification.`,
 		image: jobit,
 		source_code_link: 'https://github.com/',
 	},
-	// 	{
-	// 		name: 'Motto',
-	// 		description: `An mobile application for ordering
+	// {
+	// 	name: 'Motto',
+	// 	description: `An mobile application for ordering
 	// personalized coffee for pickup within a
 	// coffee shop network.`,
-	// 		tags: [
-	// 			{
-	// 				name: 'nextjs',
-	// 				color: 'blue-text-gradient',
-	// 			},
-	// 			{
-	// 				name: 'supabase',
-	// 				color: 'green-text-gradient',
-	// 			},
-	// 			{
-	// 				name: 'css',
-	// 				color: 'pink-text-gradient',
-	// 			},
-	// 		],
-	// 		image: tripguide,
-	// 		source_code_link: 'https://github.com/',
-	// 	},
-	// 	{
-	// 		name: 'Skyquest',
-	// 		description: `A web application that displays flights,
-	// restaurants and attractions in specific
-	// cities with various filter options.`,
-	// 		tags: [
-	// 			{
-	// 				name: 'nextjs',
-	// 				color: 'blue-text-gradient',
-	// 			},
-	// 			{
-	// 				name: 'supabase',
-	// 				color: 'green-text-gradient',
-	// 			},
-	// 			{
-	// 				name: 'css',
-	// 				color: 'pink-text-gradient',
-	// 			},
-	// 		],
-	// 		image: tripguide,
-	// 		source_code_link: 'https://github.com/',
-	// 	},
+	// 	tags: [
+	// 		{
+	// 			name: 'nextjs',
+	// 			color: 'blue-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'supabase',
+	// 			color: 'green-text-gradient',
+	// 		},
+	// 		{
+	// 			name: 'css',
+	// 			color: 'pink-text-gradient',
+	// 		},
+	// 	],
+	// 	image: tripguide,
+	// 	source_code_link: 'https://github.com/',
+	// },
+	{
+		name: 'Skyquest',
+		description: `A web application that displays flights,
+	restaurants and attractions in specific
+	cities with various filter options.`,
+		tags: [
+			{
+				name: 'nextjs',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'supabase',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'css',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: tripguide,
+		source_code_link: 'https://github.com/',
+	},
 ];
 
 export { technologies, projects, socials };

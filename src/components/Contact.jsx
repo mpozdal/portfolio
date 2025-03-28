@@ -4,6 +4,7 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { fadeIn, textVariant } from '../utils/motion';
 import emailjs from '@emailjs/browser';
+
 const Contact = () => {
 	const [form, setForm] = useState({
 		name: '',
@@ -21,18 +22,19 @@ const Contact = () => {
 		e.preventDefault();
 		setLoading(true);
 		emailjs.send(
-			'service_jey50c8',
-			'template_lvi50pd',
+			process.env.REACT_APP_SERVICE_ID,
+			process.env.REACT_APP_TEMPLATE_ID,
 			{
 				from_name: form.name,
 				to_name: 'Michał',
 				from_email: form.email,
-				to_email: 'pozdal.michal@gmail.com',
+				to_email: process.env.REACT_APP_EMAIL,
 				message: form.message,
 			},
-			'7505z8gO2BXSHROqy'
+			process.env.REACT_APP_PUBLIC_KEY
 		);
 		setLoading(false);
+		setForm({ name: '', email: '', message: '' });
 	};
 	return (
 		<section className="flex h-[600px] flex-col lg:flex-row">

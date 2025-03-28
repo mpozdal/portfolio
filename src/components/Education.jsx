@@ -26,15 +26,16 @@ const Education = () => {
 							'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(116,146,147,0.3) 100% ',
 
 						padding: '3rem 0rem 3rem 2rem',
+						boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
 					}}
 					contentArrowStyle={{
-						borderRight: '7px solid  #749293',
+						borderRight: '7px solid  rgba(116,146,147,0.3)',
 					}}
 					date="Feb 2025 - present"
 					iconStyle={{
-						background: 'rgb(87,106,107)',
+						background: 'rgb(0,0,0)',
 						background:
-							'linear-gradient(0deg, rgba(87,106,107,1) 0%, rgba(116,146,147,1) 100%)',
+							'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(116,146,147,1) 100% ',
 						color: '#fff',
 						display: 'flex',
 						justifyContent: 'center',
@@ -60,16 +61,17 @@ const Education = () => {
 							'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(116,146,147,0.3) 100%',
 						color: '#fff',
 						padding: '3rem 0rem 3rem 2rem',
+						boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)',
 					}}
 					contentArrowStyle={{
-						borderRight: '7px solid  #749293',
+						borderRight: '7px solid  rgba(116,146,147,0.3)',
 					}}
 					className="vertical-timeline-element--work"
 					date="Oct 2021 - Jan 2025"
 					iconStyle={{
-						background: 'rgb(87,106,107)',
+						background: 'rgb(0,0,0)',
 						background:
-							'linear-gradient(0deg, rgba(87,106,107,1) 0%, rgba(116,146,147,1) 100%)',
+							'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(116,146,147,1) 100% ',
 						color: '#fff',
 						display: 'flex',
 						justifyContent: 'center',

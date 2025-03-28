@@ -22,8 +22,8 @@ const Cube = ({ targetRotation, onClick }) => {
 
 	// Zmieniamy rotację obiektu na wybrany bok
 	const springProps = useSpring({
-		rotation: targetRotations[targetRotation] || [-0.1, -0.1, -0.1],
-		config: { tension: 170, friction: 26 },
+		rotation: targetRotations[targetRotation] || [-0.2, -0.2, -0.2],
+		config: { tension: 150, friction: 50 },
 	});
 
 	// Po kliknięciu na obiekt zmieniamy stan na nową stronę
@@ -39,33 +39,15 @@ const Cube = ({ targetRotation, onClick }) => {
 			ref={meshRef}
 			onClick={handleClick}
 			rotation={springProps.rotation}
-			scale={0.3} // Przypisujemy animowane wartości
+			scale={0.25} // Przypisujemy animowane wartości
 		>
 			<boxGeometry args={[16, 9, 16]} />
-			<meshStandardMaterial
-				map={textures.front} // Textura dla przedniego boku
-				attach="material-0"
-			/>
-			<meshStandardMaterial
-				map={textures.left} // Textura dla lewego boku
-				attach="material-1"
-			/>
-			<meshStandardMaterial
-				map={textures.front} // Textura dla górnego boku
-				attach="material-4"
-			/>
-			<meshStandardMaterial
-				map={textures.front} // Textura dla dolnego boku
-				attach="material-5"
-			/>
-			<meshStandardMaterial
-				color="black" // Textura dla prawego boku
-				attach="material-2"
-			/>
-			<meshStandardMaterial
-				color="black" // Textura dla tylnego boku
-				attach="material-3"
-			/>
+			<meshStandardMaterial map={textures.left} attach="material-1" />
+			<meshStandardMaterial map={''} attach="material-2" />
+			<meshStandardMaterial map={''} attach="material-3" />
+			<meshStandardMaterial map={textures.front} attach="material-4" />
+			<meshStandardMaterial map={''} attach="material-5" />
+			<meshStandardMaterial map={''} attach="material-6" />
 		</animated.mesh>
 	);
 };
@@ -92,8 +74,9 @@ const Projects = () => {
 				setSide('left');
 				break;
 			case 2:
-				setSide('right');
+				setSide('back');
 				break;
+
 			default:
 				break;
 		}
@@ -107,13 +90,15 @@ const Projects = () => {
 				variants={textVariant()}
 				className="flex w-full flex-col lg:flex-row "
 			>
-				<div className="lg:w-1/2 w-full flex flex-col gap-4">
+				<div className="lg:w-1/2 w-full flex flex-col gap-4  justify-between">
 					<p className={styles.sectionSubText}>PROJECTS</p>
 					<h2 className={styles.sectionHeadText}>
 						{projects[idx].name}.
 					</h2>
 
-					<p classname="text-justify">{projects[idx].description}</p>
+					<p classname="text-justify h-[400px]">
+						{projects[idx].description}
+					</p>
 					<div className="flex flex-row gap-1 justify-left items-center">
 						{projects[idx].tags.map((tag) => (
 							<div className="px-2 py-1 text-secondary  border-0 border-secondary rounded-xl">

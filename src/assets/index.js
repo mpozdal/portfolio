@@ -35,6 +35,8 @@ import azure from './tech/azure.png';
 import sql from './tech/sql.png';
 import web3 from './tech/web3.png';
 
+import Animation from './animation.json';
+
 export {
 	backend,
 	creator,
@@ -68,4 +70,5 @@ export {
 	azure,
 	sql,
 	web3,
+	Animation,
 };
