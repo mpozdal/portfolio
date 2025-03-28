@@ -54,7 +54,7 @@ const Contact = () => {
 						<p>Name</p>
 						<input
 							placeholder="e.g. John Doe"
-							className="w-[400px] px-4 py-3 rounded-xl outline-none border-none"
+							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300"
 							type="text"
 							value={form.name}
 							onChange={handleChange}
@@ -65,7 +65,7 @@ const Contact = () => {
 						<p>Email</p>
 						<input
 							placeholder="e.g. example@gmail.com"
-							className="w-[400px] px-4 py-3 rounded-xl outline-none border-none"
+							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300"
 							type="email"
 							value={form.email}
 							onChange={handleChange}
@@ -76,7 +76,7 @@ const Contact = () => {
 						<p>Message</p>
 						<textarea
 							placeholder="What you want to say?"
-							className="w-[400px] px-4 py-3 rounded-xl outline-none border-none"
+							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300 "
 							rows="4"
 							value={form.message}
 							onChange={handleChange}
@@ -85,7 +85,7 @@ const Contact = () => {
 					</label>
 					<button
 						type="submit"
-						className="w-[400px] px-4 py-2 rounded-xl bg-white text-black hover:bg-secondary hover:text-white cursor-pointer transition-colors duration-300"
+						className="w-[400px] px-4 py-2 rounded-xl bg-white text-black hover:bg-secondary hover:text-white cursor-pointer transition-all duration-300 hover:scale-90 hover:opacity-90"
 					>
 						{loading ? 'Sending..' : 'Send message'}
 					</button>

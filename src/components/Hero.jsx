@@ -2,10 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { socials } from '../constants';
+import { SectionWrapper } from '../hoc';
 const Hero = () => {
 	return (
 		<section
-			className={`${styles.paddingX} relative w-full h-screen flex justify-center items-center flex-col 
+			className={`mx-auto max-w-7xl relative w-full h-screen flex justify-center items-center flex-col 
 		 `}
 		>
 			<div
@@ -43,7 +44,7 @@ const Hero = () => {
 						download="CV- Michal Pozdal"
 						target="_blank"
 					>
-						<button className="px-4 py-2 border-2 border-secondary rounded-full text-secondary hover:text-black hover:bg-secondary bg-black font-semibold transition duration-300 hover:shadow-md hover:shadow-secondary/50">
+						<button className="px-4 py-2 border-2 border-secondary rounded-full text-secondary hover:text-black hover:bg-secondary bg-transparent font-semibold transition duration-300 hover:shadow-md hover:shadow-secondary/50">
 							Download CV
 						</button>
 					</a>
@@ -55,7 +56,7 @@ const Hero = () => {
 							key={index}
 						>
 							<div
-								className="w-10 h-10 cursor-pointer hover:text-black hover:bg-secondary bg-black
+								className="w-10 h-10 cursor-pointer hover:text-black hover:bg-secondary bg-transparent
     rounded-full text-secondary border-2 border-secondary flex justify-center items-center 
     duration-300 hover:shadow-md hover:shadow-secondary/50  relative"
 							>

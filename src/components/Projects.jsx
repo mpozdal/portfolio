@@ -28,7 +28,7 @@ const Cube = ({ targetRotation, onClick }) => {
 
 	// Po kliknięciu na obiekt zmieniamy stan na nową stronę
 	const handleClick = () => {
-		onClick();
+		//onClick();
 	};
 	const textures = useTexture({
 		front: '/breezy.png',
@@ -73,10 +73,6 @@ const Projects = () => {
 			case 1:
 				setSide('left');
 				break;
-			case 2:
-				setSide('back');
-				break;
-
 			default:
 				break;
 		}
@@ -85,61 +81,70 @@ const Projects = () => {
 	};
 
 	return (
-		<>
+		<div className="w-full">
 			<motion.div
 				variants={textVariant()}
 				className="flex w-full flex-col lg:flex-row "
 			>
-				<div className="lg:w-1/2 w-full flex flex-col gap-4  justify-between">
-					<p className={styles.sectionSubText}>PROJECTS</p>
-					<h2 className={styles.sectionHeadText}>
-						{projects[idx].name}.
-					</h2>
-
-					<p classname="text-justify h-[400px]">
-						{projects[idx].description}
-					</p>
-					<div className="flex flex-row gap-1 justify-left items-center">
-						{projects[idx].tags.map((tag) => (
-							<div className="px-2 py-1 text-secondary  border-0 border-secondary rounded-xl">
-								#{tag.name}
+				<div className="grid  lg:grid-cols-2 gap-10">
+					{projects.map((project, idx) => (
+						<div className="flex flex-col justify-between gap-5 cursor-pointer">
+							<div>
+								<p className={styles.sectionSubText}>PROJECT</p>
+								<h2 className={styles.sectionHeadText}>
+									{project.name}.
+								</h2>
 							</div>
-						))}
-						<a
-							href={projects[idx].source_code_link}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<button className="px-2 py-1 text-secondary  border-2 border-secondary rounded-xl flex justify-center items-center font-bold hover:bg-secondary hover:text-black transition-all">
-								Github &nbsp; <FaGithub />
-							</button>
-						</a>
-					</div>
 
-					<div className="flex justify-between ">
-						<button
-							onClick={() => handleChangeProject(idx - 1)}
-							className="w-16 h-16 text-3xl rounded-xl bg-white/10 flex justify-center items-center"
-						>
-							&lt;
-						</button>
-						<button
-							onClick={() => handleChangeProject(idx + 1)}
-							className="w-16 h-16 text-3xl rounded-xl bg-white/10 flex justify-center items-center"
-						>
-							&gt;
-						</button>
-					</div>
-				</div>
-				<div className=" w-full lg:w-1/2 ">
-					<Canvas>
-						<ambientLight intensity={0.6} />
-
-						<Cube targetRotation={side} onClick={() => {}} />
-					</Canvas>
+							<div className="text-justify  h-full">
+								{project.description}
+							</div>
+							<div className="flex flex-row gap-1 justify-left items-center">
+								{project.tags.map((tag) => (
+									<div className="px-2 py-1 text-secondary  border-0 border-secondary rounded-xl">
+										#{tag.name}
+									</div>
+								))}
+								<a
+									href={project.source_code_link}
+									target="_blank"
+									rel="noreferrer"
+									className="lg:hidden"
+								>
+									<button className="px-2 py-1  text-secondary  border-2 border-secondary rounded-xl flex justify-center items-center font-bold hover:bg-secondary hover:text-black transition-all hover:opacity-90 hover:scale-110 duration-300 ">
+										Github &nbsp; <FaGithub />
+									</button>
+								</a>
+							</div>
+							<a
+								href={project.source_code_link}
+								target="_blank"
+								rel="noreferrer"
+								className="hidden lg:flex"
+							>
+								<button className="px-2 py-1 w-1/3 text-secondary  border-2 border-secondary rounded-xl flex justify-center items-center font-bold hover:bg-secondary hover:text-black transition-all hover:opacity-90 hover:scale-110 duration-300 ">
+									Github &nbsp; <FaGithub />
+								</button>
+							</a>
+							{/* <div className="flex justify-between ">
+								<button
+									onClick={() => handleChangeProject(idx - 1)}
+									className="w-16 h-16 text-3xl rounded-xl bg-white/10 flex justify-center items-center"
+								>
+									&lt;
+								</button>
+								<button
+									onClick={() => handleChangeProject(idx + 1)}
+									className="w-16 h-16 text-3xl rounded-xl bg-white/10 flex justify-center items-center"
+								>
+									&gt;
+								</button>
+							</div> */}
+						</div>
+					))}
 				</div>
 			</motion.div>
-		</>
+		</div>
 	);
 };
 

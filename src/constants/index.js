@@ -145,7 +145,7 @@ const projects = [
 			},
 		],
 		image: carrent,
-		source_code_link: 'https://github.com/',
+		source_code_link: 'https://github.com/mpozdal/breezy-frontend',
 	},
 	{
 		name: 'CertifyLite',
@@ -168,7 +168,7 @@ transparent method for file verification.`,
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'blockchain sepolia',
+				name: 'blockchain-sepolia',
 				color: 'pink-text-gradient',
 			},
 			{
@@ -177,30 +177,71 @@ transparent method for file verification.`,
 			},
 		],
 		image: jobit,
-		source_code_link: 'https://github.com/',
+		source_code_link: 'https://github.com/mpozdal/CertifyLite',
 	},
-	// {
-	// 	name: 'Motto',
-	// 	description: `An mobile application for ordering
-	// personalized coffee for pickup within a
-	// coffee shop network.`,
-	// 	tags: [
-	// 		{
-	// 			name: 'nextjs',
-	// 			color: 'blue-text-gradient',
-	// 		},
-	// 		{
-	// 			name: 'supabase',
-	// 			color: 'green-text-gradient',
-	// 		},
-	// 		{
-	// 			name: 'css',
-	// 			color: 'pink-text-gradient',
-	// 		},
-	// 	],
-	// 	image: tripguide,
-	// 	source_code_link: 'https://github.com/',
-	// },
+
+	{
+		name: 'Flok e-shop ',
+		description: `A modern e-commerce platform based on Shopify with an intuitive interface, secure payments.`,
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'postgresql',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'google-dialog-flow',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: tripguide,
+		source_code_link: 'https://github.com/mpozdal/io-motto',
+	},
+	{
+		name: 'Motto',
+		description: `An mobile application for ordering
+	personalized coffee for pickup within a
+	coffee shop network.`,
+		tags: [
+			{
+				name: 'react-native',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'aws-app-sync',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'dynamodb',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: tripguide,
+		source_code_link: 'https://github.com/mpozdal/io-motto',
+	},
+	{
+		name: 'RestaurantMate',
+		description: `RestaurantMate_AI is an intelligent table reservation bot built with Dialogflow and powered by a PostgreSQL database. The app allows quick and convenient restaurant bookings while sending reservation details to the provided email address.`,
+		tags: [
+			{
+				name: 'react',
+				color: 'blue-text-gradient',
+			},
+			{
+				name: 'postgresql',
+				color: 'green-text-gradient',
+			},
+			{
+				name: 'google-dialog-flow',
+				color: 'pink-text-gradient',
+			},
+		],
+		image: tripguide,
+		source_code_link: 'https://github.com/mpozdal/restaurantmate_ai',
+	},
 	{
 		name: 'Skyquest',
 		description: `A web application that displays flights,
@@ -208,20 +249,24 @@ transparent method for file verification.`,
 	cities with various filter options.`,
 		tags: [
 			{
-				name: 'nextjs',
+				name: 'react',
 				color: 'blue-text-gradient',
 			},
 			{
-				name: 'supabase',
+				name: 'java-spring-boot',
 				color: 'green-text-gradient',
 			},
 			{
-				name: 'css',
+				name: 'postgresql',
+				color: 'pink-text-gradient',
+			},
+			{
+				name: 'jwt',
 				color: 'pink-text-gradient',
 			},
 		],
 		image: tripguide,
-		source_code_link: 'https://github.com/',
+		source_code_link: 'https://github.com/mpozdal/ztpai-SkyQuest',
 	},
 ];
 

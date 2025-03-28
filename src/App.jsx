@@ -3,6 +3,8 @@ import { About, Hero, Navbar, Tech, Projects, Contact } from './components';
 import Education from './components/Education';
 import Lottie from 'lottie-react';
 import { Animation } from './assets';
+import CustomCursor from 'custom-cursor-react';
+import 'custom-cursor-react/dist/index.css';
 function App() {
 	return (
 		<BrowserRouter>
@@ -10,7 +12,7 @@ function App() {
 				{/* <div className=" bg-hero-pattern bg-fixed bg-cover  bg-no-repeat bg-center"> */}
 				<Lottie
 					animationData={Animation}
-					className="bg-fixed bg-contain bg-no-repeat bg-center fixed opacity-15 grayscale  "
+					className="bg-fixed bg-cover w-full fixed opacity-15 grayscale  "
 				/>
 				<Navbar />
 				<Hero />
