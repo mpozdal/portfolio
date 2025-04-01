@@ -4,7 +4,6 @@ import { motion, px } from 'framer-motion';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
-import { Canvas } from '@react-three/fiber';
 import { useTexture } from '@react-three/drei';
 import { useSpring, animated } from '@react-spring/three';
 import { FaGithub } from 'react-icons/fa';
