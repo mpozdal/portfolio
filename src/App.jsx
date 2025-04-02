@@ -4,7 +4,6 @@ import Education from './components/Education';
 import Lottie from 'lottie-react';
 import { useEffect, useState } from 'react';
 import { Animation } from './assets';
-import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
 import Hotjar from '@hotjar/browser';
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
@@ -12,7 +11,7 @@ function App() {
 	const siteId = 5358664;
 	const hotjarVersion = 6;
 
-	const [hotjarEnabled, setHotjarEnabled] = useState(false);
+	const [_, setHotjarEnabled] = useState(false);
 
 	useEffect(() => {
 		if (getCookieConsentValue('hotjar-consent') === 'true') {
@@ -23,7 +22,6 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary">
-				{/* <div className=" bg-hero-pattern bg-fixed bg-cover  bg-no-repeat bg-center"> */}
 				<Lottie
 					animationData={Animation}
 					className="bg-fixed bg-cover w-full fixed opacity-25 grayscale  "
@@ -39,7 +37,6 @@ function App() {
 				<Projects />
 				<Contact />
 			</div>
-			{/* </div> */}
 			<CookieConsent
 				location="bottom"
 				buttonText="Accept"

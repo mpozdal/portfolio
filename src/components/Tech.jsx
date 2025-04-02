@@ -1,5 +1,3 @@
-import { useState, useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
 import { technologies } from '../constants';
 import { BallCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
@@ -12,6 +10,7 @@ const Tech = () => {
 			<div className="grid sm:grid-cols-4 lg:grid-cols-6 grid-cols-3 w-full gap-5">
 				{technologies.map((tech, index) => (
 					<a
+						href={() => false}
 						data-tooltip-id="my-tooltip"
 						data-tooltip-content={tech.name}
 						data-tooltip-place="top"

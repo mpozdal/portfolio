@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { menu, close } from '../assets';
@@ -10,9 +9,6 @@ const Navbar = () => {
 	const [active, setActive] = useState('');
 	const [toggle, setToggle] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
-	const [text, setText] = useState(''); // Aktualny tekst wpisywany
-	const [index, setIndex] = useState(0); // Aktualny tekst wpisywany
-	const fullText = 'pozdal.dev'; // Pełna nazwa strony
 
 	useEffect(() => {
 		const handleScroll = () => {

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
-import { fadeIn, textVariant } from '../utils/motion';
+import { textVariant } from '../utils/motion';
 
 import {
 	VerticalTimeline,
@@ -21,7 +21,6 @@ const Education = () => {
 				<VerticalTimelineElement
 					className="vertical-timeline-element--work"
 					contentStyle={{
-						background: 'rgb(0,0,0)',
 						background:
 							'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(116,146,147,0.3) 100% ',
 
@@ -33,7 +32,6 @@ const Education = () => {
 					}}
 					date="Feb 2025 - present"
 					iconStyle={{
-						background: 'rgb(0,0,0)',
 						background:
 							'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(116,146,147,1) 100% ',
 						color: '#fff',
@@ -56,7 +54,6 @@ const Education = () => {
 				</VerticalTimelineElement>
 				<VerticalTimelineElement
 					contentStyle={{
-						background: 'rgb(0,0,0)',
 						background:
 							'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(116,146,147,0.3) 100%',
 						color: '#fff',
@@ -69,7 +66,6 @@ const Education = () => {
 					className="vertical-timeline-element--work"
 					date="Oct 2021 - Jan 2025"
 					iconStyle={{
-						background: 'rgb(0,0,0)',
 						background:
 							'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(116,146,147,1) 100% ',
 						color: '#fff',
@@ -92,7 +88,6 @@ const Education = () => {
 
 				<VerticalTimelineElement
 					iconStyle={{
-						background: 'rgb(0,0,0)',
 						background:
 							'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(116,146,147,1) 100% ',
 					}}

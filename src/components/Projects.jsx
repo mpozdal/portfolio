@@ -1,6 +1,5 @@
-import { useState, useRef } from 'react';
 import { projects } from '../constants';
-import { motion, px } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { fadeIn } from '../utils/motion';
