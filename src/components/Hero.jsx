@@ -72,7 +72,7 @@ const Hero = () => {
 					<div className="w-[30px] h-[46px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
 						<motion.div
 							animate={{
-								y: [0, 20, 0],
+								y: [0, 15, 0],
 							}}
 							transition={{
 								duration: 1.5,

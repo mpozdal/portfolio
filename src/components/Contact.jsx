@@ -37,24 +37,24 @@ const Contact = () => {
 		setForm({ name: '', email: '', message: '' });
 	};
 	return (
-		<section className="flex h-[600px] flex-col lg:flex-row">
-			<div className="flex justify-center lg:justify-start items-center  w-full h-full">
+		<section className="w-full  flex justify-around flex-col lg:flex-row gap-8">
+			<div className=" flex justify-start items-center  ">
 				<motion.div variants={textVariant()}>
 					<p className={styles.sectionSubText}>CONTACT</p>
 					<h2 className={styles.sectionHeadText}>Get in Touch.</h2>
 				</motion.div>
 			</div>
-			<div className="flex justify-center items-center w-full h-full">
+			<div className="flex gap-5">
 				<form
 					onSubmit={handleSubmit}
 					ref={formRef}
-					className="flex flex-col gap-8 "
+					className="flex flex-col gap-8 w-full"
 				>
 					<label>
 						<p>Name</p>
 						<input
 							placeholder="e.g. John Doe"
-							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300"
+							className="w-full lg:w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300 rounded-none"
 							type="text"
 							value={form.name}
 							onChange={handleChange}
@@ -65,7 +65,7 @@ const Contact = () => {
 						<p>Email</p>
 						<input
 							placeholder="e.g. example@gmail.com"
-							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300"
+							className="w-full lg:w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300 rounded-none"
 							type="email"
 							value={form.email}
 							onChange={handleChange}
@@ -76,7 +76,7 @@ const Contact = () => {
 						<p>Message</p>
 						<textarea
 							placeholder="What you want to say?"
-							className="w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300 "
+							className="w-full lg:w-[400px] px-4 py-3  outline-none  bg-transparent border-b-[2px] border-gray-600 focus:border-secondary transition-all duration-300 rounded-none"
 							rows="4"
 							value={form.message}
 							onChange={handleChange}
@@ -85,7 +85,7 @@ const Contact = () => {
 					</label>
 					<button
 						type="submit"
-						className="w-[400px] px-4 py-2 rounded-xl bg-white text-black hover:bg-secondary hover:text-white cursor-pointer transition-all duration-300 hover:scale-90 hover:opacity-90"
+						className="w-full lg:w-[400px] px-4 py-2 rounded-xl bg-white text-black hover:bg-secondary hover:text-white cursor-pointer transition-all duration-300 hover:scale-90 hover:opacity-90"
 					>
 						{loading ? 'Sending..' : 'Send message'}
 					</button>

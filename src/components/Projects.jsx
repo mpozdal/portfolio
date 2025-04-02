@@ -27,11 +27,11 @@ const Projects = () => {
 					</div>
 					<div className="flex flex-row flex-wrap gap-1 justify-left items-center  ">
 						{project.tags.map((tag) => (
-							<div className="px-2 py-1 text-secondary  border-0 border-secondary rounded-xl">
+							<div className="px-2 py-1 text-secondary  border-0 border-secondary text-sm rounded-xl">
 								#{tag.name}
 							</div>
 						))}
-						<a
+						{/* <a
 							href={project.source_code_link}
 							target="_blank"
 							rel="noreferrer"
@@ -40,13 +40,13 @@ const Projects = () => {
 							<button className="px-2 py-1  text-secondary  border-2 border-secondary rounded-xl flex justify-center items-center font-bold hover:bg-secondary hover:text-black transition-all hover:opacity-90 hover:scale-110 duration-300 ">
 								Github &nbsp; <FaGithub />
 							</button>
-						</a>
+						</a> */}
 					</div>
 					<a
 						href={project.source_code_link}
 						target="_blank"
 						rel="noreferrer"
-						className="hidden lg:flex"
+						className="flex"
 					>
 						<button className="px-2 py-1 w-1/3 text-secondary  border-2 border-secondary rounded-xl flex justify-center items-center font-bold hover:bg-secondary hover:text-black transition-all hover:opacity-90 hover:scale-110 duration-300 ">
 							Github &nbsp; <FaGithub />
