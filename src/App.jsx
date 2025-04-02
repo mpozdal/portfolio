@@ -5,7 +5,12 @@ import Lottie from 'lottie-react';
 import { Animation } from './assets';
 import CustomCursor from 'custom-cursor-react';
 import 'custom-cursor-react/dist/index.css';
+import Hotjar from '@hotjar/browser';
 function App() {
+	const siteId = 5358664;
+	const hotjarVersion = 6;
+
+	Hotjar.init(siteId, hotjarVersion);
 	return (
 		<BrowserRouter>
 			<div className="relative z-0 bg-primary">
