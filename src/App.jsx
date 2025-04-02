@@ -12,7 +12,7 @@ function App() {
 				{/* <div className=" bg-hero-pattern bg-fixed bg-cover  bg-no-repeat bg-center"> */}
 				<Lottie
 					animationData={Animation}
-					className="bg-fixed bg-cover w-full fixed opacity-15 grayscale  "
+					className="bg-fixed bg-cover w-full fixed opacity-25 grayscale  "
 				/>
 				<Navbar />
 				<Hero />

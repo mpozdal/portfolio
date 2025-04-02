@@ -84,7 +84,7 @@ const Navbar = () => {
 								key={index}
 							>
 								<div
-									className="w-8 h-8 cursor-pointer hover:text-black hover:bg-secondary bg-black
+									className="w-8 h-8 cursor-pointer  hover:text-white hover:border-white hover:scale-90 bg-black
 					 rounded-full text-secondary border-2 border-secondary flex justify-center items-center transition duration-300 hover:shadow-md hover:shadow-secondary/50"
 								>
 									{social.icon}

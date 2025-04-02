@@ -6,7 +6,7 @@ import { SectionWrapper } from '../hoc';
 const Hero = () => {
 	return (
 		<section
-			className={`${styles.padding} mx-auto max-w-7xl relative w-full h-screen flex justify-center items-center flex-col 
+			className={`${styles.padding} mx-auto max-w-7xl relative w-full h-[100dvh] flex justify-center items-center flex-col 
 		 `}
 		>
 			<div
@@ -17,7 +17,7 @@ const Hero = () => {
 					<div className="ml-10 ">
 						<span className="text-gray-500 ">&lt;h1&gt;</span>
 						<h1 className="text-4xl sm:text-6xl font-bold tracking-wider">
-							HI,
+							Hi,
 							<br />
 							I’m <span className="text-secondary">Michał</span>
 							,
@@ -67,12 +67,12 @@ const Hero = () => {
 				</div>
 			</div>
 
-			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+			<div className="absolute bottom-10 w-full flex justify-center items-center">
 				<a href="#about">
-					<div className="w-[32px] h-[58px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+					<div className="w-[30px] h-[46px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
 						<motion.div
 							animate={{
-								y: [0, 24, 0],
+								y: [0, 20, 0],
 							}}
 							transition={{
 								duration: 1.5,
