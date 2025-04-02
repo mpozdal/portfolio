@@ -25,7 +25,7 @@ const Projects = () => {
 					<div className="text-justify text-wrap ">
 						{project.description}
 					</div>
-					<div className="flex flex-row gap-1 justify-left items-center  ">
+					<div className="flex flex-row flex-wrap gap-1 justify-left items-center  ">
 						{project.tags.map((tag) => (
 							<div className="px-2 py-1 text-secondary  border-0 border-secondary rounded-xl">
 								#{tag.name}
