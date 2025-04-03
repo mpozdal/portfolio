@@ -7,6 +7,9 @@ import { Animation } from './assets';
 import 'custom-cursor-react/dist/index.css';
 import Hotjar from '@hotjar/browser';
 import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
+import { ToastContainer } from 'react-toastify';
+import { IoIosCheckmarkCircle, IoIosAlert, IoIosWarning } from 'react-icons/io';
+
 function App() {
 	const siteId = 5358664;
 	const hotjarVersion = 6;
@@ -25,6 +28,39 @@ function App() {
 				<Lottie
 					animationData={Animation}
 					className=" h-[100dvh]  bg-fixed w-[100dvh] lg:w-[100vw] rotate-90  lg:rotate-0 fixed opacity-25 grayscale  "
+				/>
+				<ToastContainer
+					position="bottom-right"
+					autoClose={5000}
+					hideProgressBar={false}
+					newestOnTop={false}
+					closeOnClick={false}
+					rtl={false}
+					pauseOnFocusLoss={false}
+					draggable
+					pauseOnHover={false}
+					theme="dark"
+					toastClassName={'bg-black tracking-wider font-bold'}
+					progressClassName={'bg-secondary'}
+					icon={({ type }) => {
+						switch (type) {
+							case 'success':
+								return (
+									<IoIosCheckmarkCircle className="text-secondary text-3xl" />
+								);
+							case 'warning':
+								return (
+									<IoIosWarning className="text-secondary text-3xl" />
+								);
+							case 'error':
+								return (
+									<IoIosAlert className="text-secondary text-3xl" />
+								);
+							default:
+								return null;
+						}
+					}}
+					//transition={Bounce}
 				/>
 				<Navbar />
 				<Hero />

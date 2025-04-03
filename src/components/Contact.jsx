@@ -4,6 +4,7 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
 	const [form, setForm] = useState({
@@ -20,22 +21,62 @@ const Contact = () => {
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setLoading(true);
-		emailjs.send(
-			process.env.REACT_APP_SERVICE_ID,
-			process.env.REACT_APP_TEMPLATE_ID,
-			{
-				from_name: form.name,
-				to_name: 'Michał',
-				from_email: form.email,
-				to_email: process.env.REACT_APP_EMAIL,
-				message: form.message,
-			},
-			process.env.REACT_APP_PUBLIC_KEY
-		);
-		setLoading(false);
-		setForm({ name: '', email: '', message: '' });
+		if (!!form.email && !!form.name && !!form.message) {
+			setLoading(true);
+			try {
+				emailjs.send(
+					process.env.REACT_APP_SERVICE_ID,
+					process.env.REACT_APP_TEMPLATE_ID,
+					{
+						from_name: form.name,
+						to_name: 'Michał',
+						from_email: form.email,
+						to_email: process.env.REACT_APP_EMAIL,
+						message: form.message,
+					},
+					process.env.REACT_APP_PUBLIC_KEY
+				);
+				toast.success('Email has been sent successfully!', {
+					position: 'bottom-right',
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: false,
+					draggable: true,
+					progress: undefined,
+					theme: 'dark',
+				});
+			} catch (err) {
+				console.log(err);
+				toast.error('Error while sending email!', {
+					position: 'bottom-right',
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: false,
+					draggable: true,
+					progress: undefined,
+					theme: 'dark',
+					//transition: { Bounce },
+				});
+			}
+			setLoading(false);
+			setForm({ name: '', email: '', message: '' });
+		} else {
+			toast.warning('Complete all inputs!', {
+				position: 'bottom-right',
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: false,
+				draggable: true,
+				progress: undefined,
+				theme: 'dark',
+				//transition: { Bounce },
+			});
+		}
 	};
+
 	return (
 		<section className="w-full  flex justify-around flex-col lg:flex-row gap-8">
 			<div className=" flex justify-start items-center  ">
