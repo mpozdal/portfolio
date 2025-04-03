@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import { socials } from '../constants';
+import { Link } from 'react-router-dom';
 const Hero = () => {
 	return (
 		<section
@@ -38,15 +39,11 @@ const Hero = () => {
 					<p className="text-gray-500 text-sm my-5">&lt;/body&gt;</p>
 				</div>
 				<div className="flex gap-5 w-full sm:justify-start justify-center items-center ">
-					<a
-						href="./cv-net-swl-azure-reat.pdf"
-						download="CV- Michal Pozdal"
-						target="_blank"
-					>
+					<Link to="/cv-net-sql-react.pdf" target="_blank" download>
 						<button className="px-4 py-2 border-2 border-secondary rounded-full text-secondary hover:text-black hover:bg-secondary bg-transparent font-semibold transition duration-300 hover:shadow-md hover:shadow-secondary/50">
 							Download CV
 						</button>
-					</a>
+					</Link>
 					{socials.map((social, index) => (
 						<a
 							href={social.url}

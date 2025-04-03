@@ -11,7 +11,7 @@ const Projects = () => {
 			{projects.map((project, idx) => (
 				<motion.div
 					variants={fadeIn('right', 'spring', idx * 0.2, 0.75)}
-					className="flex flex-col justify-between gap-5 cursor-pointer "
+					className="flex flex-col justify-between  gap-5 cursor-pointer "
 					key={idx}
 				>
 					<div>
@@ -21,7 +21,7 @@ const Projects = () => {
 						</h2>
 					</div>
 
-					<div className="text-justify text-wrap ">
+					<div className="text-justify text-wrap h-full ">
 						{project.description}
 					</div>
 					<div className="flex flex-row flex-wrap gap-1 justify-left items-center  ">
