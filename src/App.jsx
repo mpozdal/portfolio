@@ -24,7 +24,7 @@ function App() {
 			<div className="relative z-0 bg-primary">
 				<Lottie
 					animationData={Animation}
-					className="bg-fixed bg-cover w-full fixed opacity-25 grayscale  "
+					className=" h-[100dvh]  bg-fixed w-[100dvh] lg:w-[100vw] rotate-90  lg:rotate-0 fixed opacity-25 grayscale  "
 				/>
 				<Navbar />
 				<Hero />
