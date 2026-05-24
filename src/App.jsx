@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { About, Hero, Navbar, Tech, Projects, Contact } from './components';
 import Education from './components/Education';
+import Experience from './components/Experience';
 import Lottie from 'lottie-react';
 import { useEffect, useState } from 'react';
 import { Animation } from './assets';
@@ -68,6 +69,7 @@ function App() {
 				<About />
 				<Tech />
 
+				<Experience />
 				<Education />
 
 				<Projects />

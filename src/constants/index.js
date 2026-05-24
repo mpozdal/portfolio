@@ -25,12 +25,27 @@ export const navLinks = [
 		title: 'About',
 	},
 	{
+		id: 'experience',
+		title: 'Experience',
+	},
+	{
 		id: 'education',
 		title: 'Education',
 	},
 	{
 		id: 'projects',
 		title: 'Projects',
+	},
+];
+
+const experiences = [
+	{
+		role: 'Junior Software Engineer',
+		company: 'Comarch',
+		date: 'Apr 2025 - Present',
+		icon: '💼',
+		description:
+			'Building and maintaining enterprise software with .NET and Angular in a production environment.',
 	},
 ];
 const socials = [
@@ -120,150 +135,71 @@ const technologies = [
 
 const projects = [
 	{
-		name: 'Breezy',
-		description: `BreezyWeatherApp is a weather application that allows users to check the weather forecast for selected cities. It is built using React and uses the OpenWeather API to fetch weather data. The app provides users with current weather conditions, temperature, and other relevant information for any city. The interface is clean and easy to use, offering a smooth experience for checking the weather.`,
+		name: 'ZKML Credit Classifier',
+		description: `Master's thesis project demonstrating Zero-Knowledge Machine Learning (ZKML) for credit scoring. A logistic regression model runs locally while Groth16 proofs are generated in the browser with SnarkJS and verified on Sepolia — sensitive financial inputs never leave the client.`,
 		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'express.js',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'restapi',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'tailwind',
-				color: 'pink-text-gradient',
-			},
+			{ name: 'circom', color: 'blue-text-gradient' },
+			{ name: 'snarkjs', color: 'green-text-gradient' },
+			{ name: 'solidity', color: 'green-text-gradient' },
+			{ name: 'python', color: 'pink-text-gradient' },
 		],
-		image: '',
+		source_code_link: 'https://github.com/mpozdal/zkml-project',
+	},
+	{
+		name: 'Travel Trace',
+		description: `Full-stack travel planning application with an Angular frontend and a .NET REST API backend. Users can organize trips, manage itineraries, and interact with a clean, responsive UI backed by structured server-side logic.`,
+		tags: [
+			{ name: 'angular', color: 'blue-text-gradient' },
+			{ name: '.net', color: 'green-text-gradient' },
+			{ name: 'typescript', color: 'green-text-gradient' },
+			{ name: 'rest-api', color: 'pink-text-gradient' },
+		],
+		source_code_link: 'https://github.com/mpozdal/travel-trace-web',
+	},
+	{
+		name: 'Blackout Chat',
+		description: `Real-time chat application built with Angular on the frontend and ASP.NET Core on the backend. Focused on responsive UI patterns, API integration, and a smooth messaging experience across the stack.`,
+		tags: [
+			{ name: 'angular', color: 'blue-text-gradient' },
+			{ name: 'asp.net-core', color: 'green-text-gradient' },
+			{ name: 'signalr', color: 'pink-text-gradient' },
+			{ name: 'typescript', color: 'pink-text-gradient' },
+		],
+		source_code_link: 'https://github.com/mpozdal/blackout-chat-frontend',
+	},
+	{
+		name: 'Two-Factor Auth',
+		description: `Authentication system with TOTP-based two-factor login. Angular SPA paired with a .NET API — covering secure credential flows, token handling, and a practical implementation of multi-factor security.`,
+		tags: [
+			{ name: 'angular', color: 'blue-text-gradient' },
+			{ name: '.net', color: 'green-text-gradient' },
+			{ name: 'jwt', color: 'pink-text-gradient' },
+			{ name: 'security', color: 'pink-text-gradient' },
+		],
+		source_code_link: 'https://github.com/mpozdal/2fa_auth_web',
+	},
+	{
+		name: 'Breezy',
+		description: `Weather application for browsing current conditions and a 7-day forecast for selected cities. React frontend with an Express backend consuming the OpenWeather API — clean UI, straightforward data flow, and a smooth browsing experience.`,
+		tags: [
+			{ name: 'react', color: 'blue-text-gradient' },
+			{ name: 'express.js', color: 'green-text-gradient' },
+			{ name: 'rest-api', color: 'green-text-gradient' },
+			{ name: 'tailwind', color: 'pink-text-gradient' },
+		],
 		source_code_link: 'https://github.com/mpozdal/breezy-frontend',
 	},
 	{
 		name: 'CertifyLite',
-		description: `An application that leverages blockchain
-technology to ensure file authenticity by
-storing their hashes on the blockchain.
-Users can verify the integrity and
-originality of a file by comparing its hash
-with the one recorded on the blockchain.
-This approach guarantees tamper-proof
-validation, providing a secure and
-transparent method for file verification.`,
+		description: `Decentralized app for anchoring file hashes on-chain so anyone can verify integrity without exposing the original file. React frontend with Solidity smart contracts deployed on Sepolia for tamper-proof, transparent validation.`,
 		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'solidity',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'blockchain-sepolia',
-				color: 'pink-text-gradient',
-			},
-			{
-				name: 'tailwind',
-				color: 'pink-text-gradient',
-			},
+			{ name: 'react', color: 'blue-text-gradient' },
+			{ name: 'solidity', color: 'green-text-gradient' },
+			{ name: 'sepolia', color: 'pink-text-gradient' },
+			{ name: 'web3', color: 'pink-text-gradient' },
 		],
-		image: 'jobit',
 		source_code_link: 'https://github.com/mpozdal/CertifyLite',
-	},
-
-	{
-		name: 'Flok e-shop ',
-		description: `A modern e-commerce platform based on Shopify with an intuitive interface, secure payments.`,
-		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'postgresql',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'google-dialog-flow',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: '',
-		source_code_link: 'https://github.com/mpozdal/io-motto',
-	},
-	{
-		name: 'Motto',
-		description: `An mobile application for ordering
-	personalized coffee for pickup within a
-	coffee shop network.`,
-		tags: [
-			{
-				name: 'react-native',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'aws-app-sync',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'dynamodb',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: '',
-		source_code_link: 'https://github.com/mpozdal/io-motto',
-	},
-	{
-		name: 'RestaurantMate',
-		description: `RestaurantMate_AI is an intelligent table reservation bot built with Dialogflow and powered by a PostgreSQL database. The app allows quick and convenient restaurant bookings while sending reservation details to the provided email address.`,
-		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'postgresql',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'google-dialog-flow',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: '',
-		source_code_link: 'https://github.com/mpozdal/restaurantmate_ai',
-	},
-	{
-		name: 'Skyquest',
-		description: `A web application that displays flights,
-	restaurants and attractions in specific
-	cities with various filter options.`,
-		tags: [
-			{
-				name: 'react',
-				color: 'blue-text-gradient',
-			},
-			{
-				name: 'java-spring-boot',
-				color: 'green-text-gradient',
-			},
-			{
-				name: 'postgresql',
-				color: 'pink-text-gradient',
-			},
-			{
-				name: 'jwt',
-				color: 'pink-text-gradient',
-			},
-		],
-		image: '',
-		source_code_link: 'https://github.com/mpozdal/ztpai-SkyQuest',
 	},
 ];
 
-export { technologies, projects, socials };
+export { technologies, projects, socials, experiences };

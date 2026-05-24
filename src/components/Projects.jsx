@@ -26,7 +26,10 @@ const Projects = () => {
 					</div>
 					<div className="flex flex-row flex-wrap gap-1 justify-left items-center  ">
 						{project.tags.map((tag) => (
-							<div className="px-2 py-1 text-secondary  border-0 border-secondary text-sm rounded-xl">
+							<div
+								key={tag.name}
+								className="px-2 py-1 text-secondary  border-0 border-secondary text-sm rounded-xl"
+							>
 								#{tag.name}
 							</div>
 						))}

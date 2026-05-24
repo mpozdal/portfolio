@@ -15,18 +15,23 @@ const About = () => {
 				variants={fadeIn('', '', 0.1, 1)}
 				className="mt-4 text-secondary text-justify text-[18px] max-w-3xl leading-[30px]"
 			>
-				&emsp;I am a master's student in computer science at the Cracow
-				University of Technology, specializing in cybersecurity.
+				&emsp;I am a Junior Software Engineer at Comarch, building
+				enterprise applications with .NET and Angular. Alongside my
+				day-to-day work, I am pursuing a master's degree in computer
+				science at the Cracow University of Technology, specializing in
+				cybersecurity.
 				<br />
 				<br />
-				&emsp;My passion for IT spans over nine years, and I have been
-				programming for eight. I enjoy working on both frontend and
-				backend development, allowing me to create comprehensive
-				solutions.
+				&emsp;I have been passionate about technology for over nine
+				years and writing code for eight. I enjoy full-stack development
+				— from polished UIs to APIs, data layers, and cloud-ready
+				services — and I like shipping solutions end to end.
 				<br />
 				<br />
-				&emsp;Additionally, I have extensive knowledge of hardware,
-				networks, firewalls, security, and databases.
+				&emsp;My interests also span security, cryptography, distributed
+				systems, and blockchain. Recent work includes ZKML proofs in the
+				browser and on-chain verification, reflecting how I combine
+				software engineering with a security-first mindset.
 			</motion.p>
 		</>
 	);

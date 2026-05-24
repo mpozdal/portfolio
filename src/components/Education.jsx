@@ -47,7 +47,7 @@ const Education = () => {
 					</h3>
 
 					<p className="text-gray-100">
-						Cracow Univeristy of Technology
+						Cracow University of Technology
 						<br />
 						Master's degree
 					</p>
@@ -81,7 +81,7 @@ const Education = () => {
 					</h3>
 
 					<p className="text-gray-100">
-						Cracow Univeristy of Technology <br />
+						Cracow University of Technology <br />
 						Master of Engineering
 					</p>
 				</VerticalTimelineElement>

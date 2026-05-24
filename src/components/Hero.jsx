@@ -22,7 +22,7 @@ const Hero = () => {
 							I’m <span className="text-secondary">Michał</span>
 							,
 							<br />
-							Full Stack Developer.
+							Software Engineer.
 						</h1>
 						<span className="text-gray-500">&lt;/h1&gt;</span>
 
@@ -30,7 +30,7 @@ const Hero = () => {
 							<span className="text-gray-500 font-normal">
 								&lt;p&gt;
 							</span>
-							&nbsp;Websites / Complex Systems / Mobile Apps&nbsp;
+							&nbsp;.NET / Angular / Full-Stack Systems&nbsp;
 							<span className="text-gray-500 font-normal">
 								&lt;p&gt;
 							</span>
@@ -39,7 +39,11 @@ const Hero = () => {
 					<p className="text-gray-500 text-sm my-5">&lt;/body&gt;</p>
 				</div>
 				<div className="flex gap-5 w-full sm:justify-start justify-center items-center ">
-					<Link to="/cv-net-sql-react.pdf" target="_blank" download>
+					<Link
+						to="/Michal_Pozdal_Resume_NET_Angular.pdf"
+						target="_blank"
+						download="Michal_Pozdal_Resume_NET_Angular.pdf"
+					>
 						<button className="px-4 py-2 border-2 border-secondary rounded-full text-secondary hover:text-black hover:bg-secondary bg-transparent font-semibold transition duration-300 hover:shadow-md hover:shadow-secondary/50">
 							Download CV
 						</button>
